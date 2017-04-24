@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="next">
+                <p>
+                    <a href="{{ url('homepage', {_locale: 'en'}) }}">COM</a>
+                    <a href="{{ url('homepage', {_locale: 'ua'}) }}">UA</a>
+                    <a href="{{ url('homepage', {_locale: 'fr'}) }}">FR</a>
+                </p>
+
+                <h2>{{ 'text'|trans }}</h2>
+                <p>
+                    <a href="{{ url('page') }}">{{ 'page'|trans }}</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+    body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
+    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
+    h2 { font-size: 21px; margin-bottom: 1em; }
+    p { margin: 0 0 1em 0; }
+    a:hover { text-decoration: none; }
+    #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
+    #container { padding: 2em; }
+</style>
+{% endblock %}
